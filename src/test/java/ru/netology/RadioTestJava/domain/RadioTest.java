@@ -18,6 +18,18 @@ public class RadioTest {
     }
 
     @Test// действия со станциями
+    public void nextA() {
+        Radio radio = new Radio();
+        radio.setCurrentStation(8);
+
+        radio.next();
+
+        int expected = 9;
+        int actual = radio.getCurrentStation();
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test// действия со станциями
     public void previous() {
         Radio radio = new Radio();
         radio.setCurrentStation(6);
