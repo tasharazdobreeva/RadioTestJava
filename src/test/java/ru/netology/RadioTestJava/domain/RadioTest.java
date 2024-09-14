@@ -20,11 +20,11 @@ public class RadioTest {
     @Test// действия со станциями
     public void nextA() {
         Radio radio = new Radio();
-        radio.setCurrentStation(8);
+        radio.setCurrentStation(9);
 
         radio.next();
 
-        int expected = 9;
+        int expected = 0;
         int actual = radio.getCurrentStation();
         Assertions.assertEquals(expected, actual);
     }
