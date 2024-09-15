@@ -13,8 +13,8 @@ public class Radio {
     }
 
     public void next() {
-        if (currentStation !=9) {
-            currentStation ++;
+        if (currentStation != 9) {
+            currentStation++;
         } else {
             currentStation = 0;
         }
@@ -22,7 +22,7 @@ public class Radio {
 
     public void previous() {
         if (currentStation != 0) {
-            currentStation --;
+            currentStation--;
         } else {
             currentStation = 9;
         }
