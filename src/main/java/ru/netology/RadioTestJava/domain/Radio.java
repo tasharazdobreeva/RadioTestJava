@@ -52,7 +52,7 @@ public class Radio {
         if (currentVolume !=100) {
             currentVolume ++;
         } else {
-            currentVolume = 0;
+            currentVolume = 100;
         }
     }
 
@@ -60,7 +60,7 @@ public class Radio {
         if (currentVolume != 0) {
             currentVolume --;
         } else {
-            currentVolume = 100;
+            currentVolume = 0;
         }
     }
 }
