@@ -179,19 +179,20 @@ public class RadioTest {
         Assertions.assertEquals(expected, actual);
     }
 
-    @Test// действия со звуком
-    public void increaseCycle() {
-        Radio radio = new Radio();
-        radio.setCurrentVolume(100);
+   @Test// действия со звуком
+    public void increase() {
+       Radio radio = new Radio();
+       radio.setCurrentVolume(80);
 
-        radio.increase();
+       radio.increase();
 
-        int expected = 100;
-        int actual = radio.getCurrentVolume();
-        Assertions.assertEquals(expected, actual);
-    }
+       int expected = 81;
+       int actual = radio.getCurrentVolume();
+       Assertions.assertEquals(expected, actual);
 
-    @Test// действия со звуком
+   }
+
+       @Test// действия со звуком
     public void doNotIncrease() {
         Radio radio = new Radio();
         radio.setCurrentVolume(99);
@@ -222,7 +223,7 @@ public class RadioTest {
 
         radio.decrease();
 
-        int expected = 0;
+        int expected = 100;
         int actual = radio.getCurrentVolume();
         Assertions.assertEquals(expected, actual);
     }
@@ -253,7 +254,7 @@ public class RadioTest {
     @Test//недопустимые значения
     public void shouldNotSetVolumeMax() {
         Radio radio = new Radio();
-        radio.setCurrentStation(116);
+        radio.setCurrentVolume(116);
 
         int expected = 0;
         int actual = radio.getCurrentVolume();
@@ -276,7 +277,7 @@ public class RadioTest {
     @Test//недопустимые значения
     public void shouldNotSetVolumeAboveMax() {
         Radio radio = new Radio();
-        radio.setCurrentStation(101);
+        radio.setCurrentVolume(101);
 
         int expected = 0;
         int actual = radio.getCurrentVolume();
