@@ -6,10 +6,10 @@ public class Radio {
     private int maxStaion;
 
     public Radio() {
-        this.maxStaion = 9;
+        this.maxStaion = 10;
     }
 
-    public  Radio(int stationsCount) {
+    public Radio(int stationsCount) {
         this.maxStaion = stationsCount - 1;
     }
 
@@ -58,8 +58,8 @@ public class Radio {
     }
 
     public void increase() {
-        if (currentVolume !=100) {
-            currentVolume ++;
+        if (currentVolume != 100) {
+            currentVolume++;
         } else {
             currentVolume = 0;
         }
@@ -67,7 +67,7 @@ public class Radio {
 
     public void decrease() {
         if (currentVolume != 0) {
-            currentVolume --;
+            currentVolume--;
         } else {
             currentVolume = 100;
         }
