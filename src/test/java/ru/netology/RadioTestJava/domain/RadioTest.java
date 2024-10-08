@@ -55,7 +55,6 @@ public class RadioTest {
     }
 
 
-
     @Test//допустимые значения
     public void shouldSetStation() {
         Radio radio = new Radio();
@@ -90,7 +89,6 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
-
 
 
     @Test// действия со звуком
