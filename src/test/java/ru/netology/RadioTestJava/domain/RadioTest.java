@@ -5,6 +5,30 @@ import org.junit.jupiter.api.Test;
 
 public class RadioTest {
 
+
+    @Test//допустимые значения
+    public void testA() {
+        Radio radio = new Radio(20);
+        radio.setCurrentStation(15);
+
+        int expected = 15;
+        int actual = radio.getCurrentStation();
+
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test// действия со станциями
+    public void test() {
+        Radio radio = new Radio(20);
+        radio.setCurrentStation(15);
+
+        radio.next();
+
+        int expected = 16;
+        int actual = radio.getCurrentStation();
+        Assertions.assertEquals(expected, actual);
+    }
+
     @Test// действия со станциями
     public void next() {
         Radio radio = new Radio();
